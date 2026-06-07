@@ -59,7 +59,7 @@
 ARG APP_DIR=/app
 ARG PUBLIC_DIR=/app/public
 ARG VERSION
-ARG RUBY_IMAGE_TAG=3.4-slim-trixie@sha256:3f335cdd6daf8a5835071065bb27cc26f4293be25657818ea2e5943ae3255ae5
+ARG RUBY_IMAGE_TAG=3.4-slim-trixie@sha256:a842f35cdf2fe24a7523182127c3ce6a4848e77fb50b3a57ec09faa59c96491e
 
 ##
 # DEPENDENCIES: Install application dependencies
