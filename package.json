@@ -137,7 +137,8 @@
     "onlyBuiltDependencies": [
       "@sentry/cli",
       "altcha",
-      "esbuild"
+      "esbuild",
+      "unrs-resolver"
     ]
   }
 }

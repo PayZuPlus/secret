@@ -125,7 +125,7 @@ RUN node --version && npm --version
 # Install necessary tools
 RUN set -eux \
   && gem install bundler \
-  && npm install -g pnpm
+  && npm install -g pnpm@10.11.0
 
 ##
 # DEPENDENCIES LAYER
