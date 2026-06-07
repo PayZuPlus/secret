@@ -6,6 +6,8 @@ import { useLanguageStore } from '@/stores/languageStore';
 import { RouteLocationNormalized, Router } from 'vue-router';
 import { processQueryParams } from './queryParams.handler';
 
+const BLOCKED_PUBLIC_PATHS = ['/about', '/pricing', '/feedback', '/translations'];
+
 export async function setupRouterGuards(router: Router): Promise<void> {
   router.beforeEach(async (to: RouteLocationNormalized) => {
     const authStore = useAuthStore();
@@ -17,9 +19,12 @@ export async function setupRouterGuards(router: Router): Promise<void> {
       return true;
     }
 
-    // Handle root path redirect
+    if (BLOCKED_PUBLIC_PATHS.includes(to.path) || to.path.startsWith('/info')) {
+      return { path: '/signin' };
+    }
+
     if (to.path === '/') {
-      return authStore.isAuthenticated ? { name: 'Dashboard' } : true;
+      return authStore.isAuthenticated ? { name: 'Dashboard' } : { path: '/signin' };
     }
 
     // Redirect authenticated users away from auth routes
