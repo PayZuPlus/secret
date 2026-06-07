@@ -233,8 +233,8 @@
       "body_tagline": "If you don't know the sender or believe it to be spam, send us the details here:"
     },
     "welcome": {
-      "subject": "Verify your Onetime Secret account",
-      "body1": "Welcome to Onetime Secret. We have a secret for you!",
+      "subject": "Verify your Secret account",
+      "body1": "Welcome to Secret. We have a secret for you!",
       "please_verify": "Please verify your account:",
       "postscript1": "This email was sent to",
       "postscript2": "If you did not make this request, you can safely ignore this email."
