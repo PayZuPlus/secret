@@ -89,7 +89,7 @@ module Core
         # although a serializer could still choose to include any of them).
         description = i18n_instance[:COMMON][:description]
         keywords = i18n_instance[:COMMON][:keywords]
-        page_title = "Onetime Secret" # TODO: Implement as config setting
+        page_title = "Secret" # TODO: Implement as config setting
         no_cache = false
         frontend_host = development[:frontend_host]
         frontend_development = development[:enabled]
